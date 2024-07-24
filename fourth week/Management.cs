@@ -115,22 +115,20 @@ namespace fourth_week
                 case 5:
                     return "שבט";
                 case 6:
-                    return "אדר";
-                case 7:
                     return "אדר הראשון";
-                case 8:
+                case 7:
                     return "אדר השני";
-                case 9:
+                case 8:
                     return "ניסן";
-                case 10:
+                case 9:
                     return "אייר";
-                case 11:
+                case 10:
                     return "סיון";
-                case 12:
+                case 11:
                     return "תמוז";
-                case 13:
+                case 12:
                     return "אב";
-                case 14:
+                case 13:
                     return "אלול";
                 default:
                     return "חודש לא חוקי";
@@ -171,7 +169,7 @@ namespace fourth_week
             }
         }
 
-        public static void SaveQueryToXml(string day, string dayOfWeek, string month, string year, string fullDate)
+        public static void SaveQueryToXml(string dayOfWeek, string dayOfMOnth, string month, string year, string fullDate)
         {
             XDocument doc;
             string filePath = Path.Combine(Environment.CurrentDirectory, "queries.xml");
@@ -186,8 +184,8 @@ namespace fourth_week
             }
 
             XElement newQuery = new XElement("Query",
-                new XElement("Day", day),
-                new XElement("DayOfWeek", dayOfWeek),
+                new XElement("Day", dayOfWeek),
+                new XElement("DayOfWeek", dayOfMOnth),
                 new XElement("Month", month),
                 new XElement("Year", year),
                 new XElement("FullDate", fullDate)

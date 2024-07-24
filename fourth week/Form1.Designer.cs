@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbDay = new System.Windows.Forms.ComboBox();
             this.cmbDayOfWeek = new System.Windows.Forms.ComboBox();
+            this.cmbDayOfMount = new System.Windows.Forms.ComboBox();
             this.cmbMounth = new System.Windows.Forms.ComboBox();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,26 +40,26 @@
             this.btnEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cmbDay
+            // cmbDayOfWeek
             // 
-            this.cmbDay.FormattingEnabled = true;
-            this.cmbDay.Items.AddRange(new object[] {
+            this.cmbDayOfWeek.FormattingEnabled = true;
+            this.cmbDayOfWeek.Items.AddRange(new object[] {
             "ראשון",
             "שני",
             "שלישי",
             "רביעי",
             "חמישי",
             "שישי"});
-            this.cmbDay.Location = new System.Drawing.Point(662, 127);
-            this.cmbDay.Name = "cmbDay";
-            this.cmbDay.Size = new System.Drawing.Size(121, 28);
-            this.cmbDay.TabIndex = 0;
-            this.cmbDay.SelectedIndexChanged += new System.EventHandler(this.cmbDay_SelectedIndexChanged);
+            this.cmbDayOfWeek.Location = new System.Drawing.Point(662, 127);
+            this.cmbDayOfWeek.Name = "cmbDayOfWeek";
+            this.cmbDayOfWeek.Size = new System.Drawing.Size(121, 28);
+            this.cmbDayOfWeek.TabIndex = 0;
+            this.cmbDayOfWeek.SelectedIndexChanged += new System.EventHandler(this.cmbDay_SelectedIndexChanged);
             // 
-            // cmbDayOfWeek
+            // cmbDayOfMount
             // 
-            this.cmbDayOfWeek.FormattingEnabled = true;
-            this.cmbDayOfWeek.Items.AddRange(new object[] {
+            this.cmbDayOfMount.FormattingEnabled = true;
+            this.cmbDayOfMount.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -90,10 +90,10 @@
             "28",
             "29",
             "30"});
-            this.cmbDayOfWeek.Location = new System.Drawing.Point(496, 127);
-            this.cmbDayOfWeek.Name = "cmbDayOfWeek";
-            this.cmbDayOfWeek.Size = new System.Drawing.Size(121, 28);
-            this.cmbDayOfWeek.TabIndex = 1;
+            this.cmbDayOfMount.Location = new System.Drawing.Point(496, 127);
+            this.cmbDayOfMount.Name = "cmbDayOfMount";
+            this.cmbDayOfMount.Size = new System.Drawing.Size(121, 28);
+            this.cmbDayOfMount.TabIndex = 1;
             // 
             // cmbMounth
             // 
@@ -204,8 +204,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbMounth);
+            this.Controls.Add(this.cmbDayOfMount);
             this.Controls.Add(this.cmbDayOfWeek);
-            this.Controls.Add(this.cmbDay);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -215,8 +215,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbDay;
         private System.Windows.Forms.ComboBox cmbDayOfWeek;
+        private System.Windows.Forms.ComboBox cmbDayOfMount;
         private System.Windows.Forms.ComboBox cmbMounth;
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.Label label1;

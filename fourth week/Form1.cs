@@ -30,15 +30,17 @@ namespace fourth_week
         private void btnEnter_Click(object sender, EventArgs e)
         {
             // Get selected values from the ComboBoxes
-            int day = cmbDay.SelectedIndex + 1;
-            string selectedDayOfWeek = Management.GetDayOfWeek(cmbDayOfWeek.SelectedIndex + 1);
-            string selectedDayOfMonth = Management.GetDayOfMonth(day);
+         
+           
+            int dayOfMonthIndex = cmbDayOfMount.SelectedIndex + 1;
+            string selectedDayOfWeek = Management.GetDayOfWeek(cmbDayOfWeek.SelectedIndex +1);
+            string selectedDayOfMonth = Management.GetDayOfMonth(dayOfMonthIndex);
             string selectedMonth = Management.GetMonthName(cmbMounth.SelectedIndex + 1);
             string selectedYear = Management.GetYearInWords(cmbYear.SelectedIndex + 1);
 
             // Construct the result string
             string resulte;
-            if (day == 30)
+            if (dayOfMonthIndex == 30)
             {
                 string nextMonth = Management.GetNextMonth(cmbMounth.SelectedIndex + 1);
                 resulte = $"{selectedDayOfWeek} {selectedDayOfMonth} לחודש {selectedMonth} שהוא ראש חודש {nextMonth} שנת {selectedYear} לבריאת העולם";
@@ -47,10 +49,11 @@ namespace fourth_week
             {
                 resulte = $"{selectedDayOfWeek} {selectedDayOfMonth} לחודש {selectedMonth} שנת {selectedYear} לבריאת העולם";
             }
-
             // Show the result in a message box
             MessageBox.Show(resulte);
 
+            // Save the query to XML
+            Management.SaveQueryToXml( selectedDayOfWeek, selectedDayOfMonth, selectedMonth, selectedYear, resulte);
         }
     }
 }
